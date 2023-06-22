@@ -2,8 +2,10 @@ import styled from "@emotion/styled";
 
 export const Header = styled.header`
   display: flex;
-  margin-bottom: 20px;
-  justify-content: space-between;
+  margin-bottom: 40px;
   align-items: center;
-  border-bottom: 1px solid black;
+`;
+
+export const Logo = styled.svg`
+  fill: #bcbff2;
 `;

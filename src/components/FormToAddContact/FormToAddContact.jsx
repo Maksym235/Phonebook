@@ -15,7 +15,8 @@ import { addContact } from "../../redux/Contacts/operations";
 import { selectContacts } from "../../redux/Contacts/selectors";
 export function Form() {
   const [name, setName] = useState("");
-  const [number, setNumber] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
 
   // --------------------------------------------
   const dispatch = useDispatch();
@@ -25,9 +26,13 @@ export function Form() {
       case "name":
         setName(evt.target.value);
         break;
-      case "number":
-        setNumber(evt.target.value);
+      case "email":
+        setEmail(evt.target.value);
         break;
+      case "phone":
+        setPhone(evt.target.value);
+        break;
+
       default:
         return;
     }
@@ -45,7 +50,8 @@ export function Form() {
     const newContact = {
       id: nanoid(),
       name,
-      number,
+      email,
+      phone,
     };
     dispatch(addContact(newContact));
 
@@ -54,7 +60,8 @@ export function Form() {
 
   const reset = () => {
     setName("");
-    setNumber("");
+    setEmail("");
+    setPhone("");
   };
 
   return (
@@ -68,10 +75,23 @@ export function Form() {
           type="text"
           name="name"
           value={name}
-          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+          // pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+          // title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
           placeholder="enter name"
+          onChange={onHandlerChange}
+        />
+      </Label>
+      <Label>
+        Email
+        <Input
+          type="email"
+          name="email"
+          value={email}
+          // pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+          // title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+          required
+          placeholder="enter email"
           onChange={onHandlerChange}
         />
       </Label>
@@ -79,10 +99,10 @@ export function Form() {
         Number
         <Input
           type="tel"
-          name="number"
-          value={number}
-          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+          name="phone"
+          value={phone}
+          // pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+          // title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
           placeholder="enter number"
           onChange={onHandlerChange}

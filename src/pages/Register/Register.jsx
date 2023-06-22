@@ -1,18 +1,9 @@
 import { RegisterForm } from "../../components/RegisterForm/RegisterForm";
-
+import { Conteiner } from "./Register.styled";
 export default function RegisterPage() {
   return (
-    <div>
-      <h1
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        Sign Up
-      </h1>
+    <Conteiner>
       <RegisterForm />
-    </div>
+    </Conteiner>
   );
 }

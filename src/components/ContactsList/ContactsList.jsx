@@ -6,9 +6,10 @@ export function ContactList() {
   const contacts = useContacts();
   return (
     <List>
-      {contacts.map((contact) => {
-        return <Contact key={contact.id} contact={contact} />;
-      })}
+      {contacts &&
+        contacts.map((contact) => {
+          return <Contact key={contact._id} contact={contact} />;
+        })}
     </List>
   );
 }

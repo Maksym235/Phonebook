@@ -29,11 +29,12 @@ const authSlice = createSlice({
       //------------SIGN UP---------
       .addCase(signUp.fulfilled, (state, action) => {
         state.user = action.payload.user;
-        state.token = action.payload.token;
+        // state.token = action.payload.token;
         state.isLoggedIn = true;
       })
       //------------LOG IN-----------
       .addCase(logIn.fulfilled, (state, action) => {
+        console.log(action.payload);
         state.user = action.payload.user;
         state.token = action.payload.token;
         state.isLoggedIn = true;

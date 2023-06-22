@@ -6,13 +6,13 @@ import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 import { deleteContact } from "../../redux/Contacts/operations";
 
-export function Contact({ contact: { id, name, number } }) {
+export function Contact({ contact: { _id, name, phone } }) {
   const dispatch = useDispatch();
 
-  const handleDelete = () => dispatch(deleteContact(id));
+  const handleDelete = () => dispatch(deleteContact(_id));
   return (
-    <Item key={id}>
-      {name}: {number}
+    <Item key={_id}>
+      {name}: {phone}
       <Button type="button" onClick={handleDelete}>
         <AiFillCloseCircle />
       </Button>
@@ -22,8 +22,8 @@ export function Contact({ contact: { id, name, number } }) {
 
 Contact.propTypes = {
   contact: PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    _id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    number: PropTypes.string.isRequired,
+    phone: PropTypes.string.isRequired,
   }),
 };

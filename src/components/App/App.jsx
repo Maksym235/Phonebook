@@ -21,6 +21,7 @@ const HomePage = lazy(() => import("../../pages/Home/Home"));
 const LoginPage = lazy(() => import("../../pages/Login/Login"));
 const RegisterPage = lazy(() => import("../../pages/Register/Register"));
 const ContactPage = lazy(() => import("../../pages/Contacts/Contacts"));
+const VerifyPage = lazy(() => import("../../pages/Verify/Verify"));
 
 export default function App() {
   const dispatch = useDispatch();
@@ -42,7 +43,7 @@ export default function App() {
           path="/register"
           element={
             <RestrictedRoute
-              redirectTo="/contacts"
+              redirectTo="/verify"
               component={<RegisterPage />}
             />
           }
@@ -50,15 +51,16 @@ export default function App() {
         <Route
           path="/login"
           element={
-            <RestrictedRoute redirectTo="/contacts" element={<LoginPage/>} />
+            <RestrictedRoute redirectTo="/contacts" component={<LoginPage />} />
           }
         />
         <Route
           path="/contacts"
           element={
-            <PrivateRoute redirectTo="/login" component={<ContactPage />} />
+            <PrivateRoute redirectTo="/register" component={<ContactPage />} />
           }
         />
+        <Route path="/verify" element={<VerifyPage />} />
       </Route>
     </Routes>
   );

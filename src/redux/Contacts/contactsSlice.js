@@ -1,10 +1,10 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 // -----------OPERATION-----------
-import { addContact, deleteContact, fetchContacts } from './operations';
+import { addContact, deleteContact, fetchContacts } from "./operations";
 
 //-----------------------------------------
-const pendingStatus = state => {
+const pendingStatus = (state) => {
   state.isLoading = true;
 };
 const rejectedStatus = (state, action) => {
@@ -15,20 +15,24 @@ const rejectedStatus = (state, action) => {
 
 //------------SLICE--------------------
 const contactsSlice = createSlice({
-  name: 'contacts',
+  name: "contacts",
   initialState: {
     contacts: [],
+    page: null,
+    limit: null,
     isLoading: false,
     error: null,
   },
-  extraReducers: bilder =>
+  extraReducers: (bilder) =>
     bilder
       //-----------fetch contacts---------------
       .addCase(fetchContacts.pending, pendingStatus)
       .addCase(fetchContacts.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.contacts = action.payload;
+        state.contacts = action.payload.resp;
+        state.page = action.payload.page;
+        state.limit = action.payload.limit;
       })
       .addCase(fetchContacts.rejected, rejectedStatus)
       //---------add contacts----------------
@@ -36,7 +40,7 @@ const contactsSlice = createSlice({
       .addCase(addContact.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.contacts.push(action.payload);
+        state.contacts.push(action.payload.contact);
       })
       .addCase(addContact.rejected, rejectedStatus)
       //--------delete contacts-----------
@@ -45,7 +49,7 @@ const contactsSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         const index = state.contacts.findIndex(
-          contact => contact.id === action.payload.id
+          (contact) => contact.id === action.payload.id
         );
         state.contacts.splice(index, 1);
       })

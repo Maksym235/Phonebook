@@ -32,7 +32,7 @@ export const Input = styled.input`
   border: none;
   background-color: transparent;
   border-bottom: 1px solid black;
-
+  color: #fff;
   &:focus {
     background-color: transparent;
     outline: none;

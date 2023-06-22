@@ -1,14 +1,15 @@
-import axios from 'axios';
+import axios from "axios";
 
-import { createAsyncThunk } from '@reduxjs/toolkit';
+import { createAsyncThunk } from "@reduxjs/toolkit";
 
-axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
+// axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
+axios.defaults.baseURL = "http://localhost:3001/";
 
 export const fetchContacts = createAsyncThunk(
-  'contacts/fetchAll',
+  "contacts/fetchAll",
   async (_, thunkAPI) => {
     try {
-      const response = await axios('contacts');
+      const response = await axios("contacts");
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -17,10 +18,10 @@ export const fetchContacts = createAsyncThunk(
 );
 
 export const addContact = createAsyncThunk(
-  'contacts/addContact',
-  async ({ name, number }, thunkAPI) => {
+  "contacts/addContact",
+  async ({ name, email, phone }, thunkAPI) => {
     try {
-      const response = await axios.post('contacts', { name, number });
+      const response = await axios.post("contacts/add", { name, email, phone });
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -29,10 +30,34 @@ export const addContact = createAsyncThunk(
 );
 
 export const deleteContact = createAsyncThunk(
-  'contacts/deleteContact',
+  "contacts/deleteContact",
   async (contactId, thunkAPI) => {
     try {
       const response = await axios.delete(`contacts/${contactId}`);
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const updateContact = createAsyncThunk(
+  "contacts/updateContact",
+  async (contactId, thunkAPI) => {
+    try {
+      const response = await axios.put(`contacts/${contactId}`);
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const toggleFavorites = createAsyncThunk(
+  "contacts/toggleFavorites",
+  async (contactId, thunkAPI) => {
+    try {
+      const response = await axios.patch(`contacts/${contactId}/favorite`);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

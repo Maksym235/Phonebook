@@ -1,10 +1,9 @@
-import { Conteiner } from './AuthNav.styled';
-import { NavLink } from 'react-router-dom';
+import { Conteiner, LogIn } from "./AuthNav.styled";
+
 export function AuthNav() {
   return (
     <Conteiner>
-      <NavLink to="/login">Log In</NavLink>
-      <NavLink to="/register">Sign Up</NavLink>
+      <LogIn to="/login">Log In</LogIn>
     </Conteiner>
   );
 }

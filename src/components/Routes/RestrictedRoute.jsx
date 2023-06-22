@@ -11,5 +11,3 @@ RestrictedRoute.propTypes = {
   component: PropTypes.any,
   redirectTo: PropTypes.any,
 };
-
-// return isLoggedIn ? <Navigate to={redirectTo} /> : Component;

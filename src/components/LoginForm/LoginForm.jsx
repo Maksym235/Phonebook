@@ -1,8 +1,13 @@
-import { Form } from "./LoginForm.styled";
+import {
+  Form,
+  Title,
+  Input,
+  Btn,
+  HaventAcc,
+  ReRouteToRegister,
+} from "./LoginForm.styled";
 import { useDispatch } from "react-redux";
 import { logIn } from "../../redux/Auth/authOperations";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
 export function LoginForm() {
   const dispatch = useDispatch();
   const handleSubmit = (evt) => {
@@ -21,21 +26,22 @@ export function LoginForm() {
   };
   return (
     <Form onSubmit={handleSubmit}>
-      <TextField
-        id="standard-basic"
+      <Title>Log in</Title>
+      <Input
         label="email"
-        variant="standard"
         type="email"
         name="email"
+        placeholder="enter your email"
       />
-      <TextField
-        id="standard-basic"
+      <Input
         label="password"
-        variant="standard"
         type="password"
         name="password"
+        placeholder="enter your password"
       />
-      <Button type="submit">Log In</Button>
+      <Btn type="submit">Log In</Btn>
+      <HaventAcc>Don’t have an account?</HaventAcc>
+      <ReRouteToRegister to="/register">Register</ReRouteToRegister>
     </Form>
   );
 }

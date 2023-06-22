@@ -1,18 +1,9 @@
 import { LoginForm } from "../../components/LoginForm/LoginForm";
-
+import { Conteiner } from "./Login.styled";
 export default function LoginPage() {
   return (
-    <div>
-      <h1
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        Log in
-      </h1>
+    <Conteiner>
       <LoginForm />
-    </div>
+    </Conteiner>
   );
 }

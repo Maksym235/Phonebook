@@ -1,8 +1,13 @@
-import { Form } from "./RegisterForm.styled";
+import {
+  Form,
+  Input,
+  Btn,
+  HaveAcc,
+  ReRouteToLogin,
+  Title,
+} from "./RegisterForm.styled";
 import { useDispatch } from "react-redux";
 import { signUp } from "../../redux/Auth/authOperations";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
 export function RegisterForm() {
   const dispatch = useDispatch();
 
@@ -25,28 +30,28 @@ export function RegisterForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <TextField
-        id="standard-basic"
+      <Title>Sign Up</Title>
+      <Input
         label="login"
-        variant="standard"
         type="text"
         name="name"
+        placeholder="enter your login"
       />
-      <TextField
-        id="standard-basic"
+      <Input
         label="email"
-        variant="standard"
         type="email"
         name="email"
+        placeholder="enter your email"
       />
-      <TextField
-        id="standard-basic"
+      <Input
         label="password"
-        variant="standard"
         type="password"
         name="password"
+        placeholder="enter your password"
       />
-      <Button type="submit">Sign Up</Button>
+      <Btn type="submit">Sign Up</Btn>
+      <HaveAcc>Already have an account?</HaveAcc>
+      <ReRouteToLogin to="/login">Log in</ReRouteToLogin>
     </Form>
   );
 }

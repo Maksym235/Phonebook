@@ -17,8 +17,6 @@ export const signUp = createAsyncThunk(
   async (userData, thunkAPI) => {
     try {
       const resp = await axios.post("auth/register", userData);
-      // setAuthHeader(resp.data.token);
-      console.log(resp.data);
       return resp.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -60,10 +58,8 @@ export const refreshUser = createAsyncThunk(
       return thunkAPI.rejectWithValue("Unable to fetch user");
     }
     try {
-      console.log(persistedToken);
       setAuthHeader(persistedToken);
       const resp = await axios.get("auth/current");
-      console.log(resp);
       return resp.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

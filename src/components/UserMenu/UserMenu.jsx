@@ -1,17 +1,20 @@
-import { Conteiner } from "./UserMenu.styled";
+import { Conteiner, Email, Btn } from "./UserMenu.styled";
 import { useDispatch } from "react-redux";
 import { logOut } from "../../redux/Auth/authOperations";
 import { useAuth } from "../hooks/useAuth";
-import Button from "@mui/material/Button";
+import { useLocation } from "react-router-dom";
 export function UserMenu() {
+  const { pathname } = useLocation();
+
   const dispatch = useDispatch();
   const { user } = useAuth();
+
   return (
     <Conteiner>
-      <p>{user.email}</p>
-      <Button type="button" onClick={() => dispatch(logOut())}>
+      <Email page={pathname}>{user.email}</Email>
+      <Btn page={pathname} type="button" onClick={() => dispatch(logOut())}>
         Log Out
-      </Button>
+      </Btn>
     </Conteiner>
   );
 }

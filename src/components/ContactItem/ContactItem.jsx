@@ -1,5 +1,5 @@
-import { AiFillCloseCircle } from "react-icons/ai";
-import { Item, Button } from "./ContactItem.styled";
+import {AiOutlineDelete} from 'react-icons/ai'
+import { Item, Button, Wrapper, Text } from "./ContactItem.styled";
 import PropTypes from "prop-types";
 
 // ----------REDUX---------------
@@ -12,9 +12,12 @@ export function Contact({ contact: { _id, name, phone } }) {
   const handleDelete = () => dispatch(deleteContact(_id));
   return (
     <Item key={_id}>
-      {name}: {phone}
+      <Wrapper>
+        <Text>{name}</Text>
+        <Text>{phone}</Text>
+      </Wrapper>
       <Button type="button" onClick={handleDelete}>
-        <AiFillCloseCircle />
+        <AiOutlineDelete size={24} color='#eaeaea' />
       </Button>
     </Item>
   );

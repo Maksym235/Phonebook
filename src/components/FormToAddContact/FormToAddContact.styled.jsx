@@ -3,20 +3,21 @@ import styled from "@emotion/styled";
 export const FormStyled = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
+  gap: 20px;
+  width: 430px;
   margin-bottom: 50px;
-  border: 2px solid black;
-  border-radius: 10px;
-  padding: 10px;
 `;
 
 export const Title = styled.h1`
-  font-size: 26px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 40px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 43px;
+  letter-spacing: 0.4px;
+  color: #fff;
 `;
 
 export const Label = styled.label`
@@ -28,29 +29,46 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-  padding-top: 10px;
+  display: flex;
+  width: 400px;
+  padding: 17px 0px 17px 30px;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
   border: none;
-  background-color: transparent;
-  border-bottom: 1px solid black;
-  color: #fff;
-  &:focus {
-    background-color: transparent;
-    outline: none;
+  border-radius: 20px;
+  background: #adafdd;
+  font-size: 17px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #eaeaea;
+  &::placeholder {
+    color: #eaeaea;
   }
 `;
 
 export const Button = styled.button`
-  widht: 150px;
-  height: 30px;
-  border-radius: 10px;
-  border: none;
-  background-color: #7b8189;
-  color: #ffffff;
+  display: flex;
+  width: 430px;
+  height: 49px;
+  padding: 13px 59px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 50px;
+  background-color: #bcbff2;
+  font-size: 17px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #000;
 
-  transition: background-color 0.5s ease-out, color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
 
   &:hover {
     background-color: #bfa8ee;
-    color: #000000;
   }
 `;

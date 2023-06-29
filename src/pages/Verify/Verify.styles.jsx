@@ -28,4 +28,3 @@ export const Text = styled.p`
   font-size: 24px;
 `;
 
-export const Link = styled.a``;

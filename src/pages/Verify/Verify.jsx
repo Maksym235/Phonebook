@@ -1,4 +1,4 @@
-import { Conteiner, Text, Title, Link, EmailIncon } from "./Verify.styles";
+import { Conteiner, Text, Title, EmailIncon } from "./Verify.styles";
 
 export default function Verify() {
   return (

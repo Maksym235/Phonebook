@@ -10,6 +10,8 @@ import { Form } from "../../components/FormToAddContact/FormToAddContact";
 import { Input } from "../../components/FindInput/FindInput";
 import { ContactList } from "../../components/ContactsList/ContactsList";
 
+//-----------STYLES-----------------
+import { Conteiner, Wrapper } from "./Contacts.styled";
 export default function Contacts() {
   const dispach = useDispatch();
 
@@ -17,10 +19,12 @@ export default function Contacts() {
     dispach(fetchContacts());
   }, [dispach]);
   return (
-    <div>
+    <Conteiner>
       <Form />
-      <Input />
-      <ContactList />
-    </div>
+      <Wrapper>
+        <Input />
+        <ContactList />
+      </Wrapper>
+    </Conteiner>
   );
 }

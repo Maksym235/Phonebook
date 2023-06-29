@@ -1,23 +1,55 @@
 import styled from "@emotion/styled";
+import { AiOutlineSearch } from "react-icons/ai";
+export const Conteiner = styled.div``;
 
-export const Label = styled.label`
-  display: flex;
-  flex-direction: column;
-  font-size: 18px;
-  font-weight: 400;
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
+export const Title = styled.h2`
+  font-size: 40px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 43px;
+  letter-spacing: 0.4px;
+  margin: 0;
+  margin-bottom: 40px;
+  color: #fff;
+`;
+
+export const Text = styled.p`
+  margin: 0;
+  font-size: 24px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #fff;
 `;
 
 export const InputSt = styled.input`
-  padding-top: 10px;
+  position: relative;
+  display: flex;
+  width: 400px;
+  padding: 17px 0px 17px 30px;
+  margin-bottom: 20px;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #adafdd;
   border: none;
-  background-color: transparent;
-  border-bottom: 1px solid black;
+  font-size: 17px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #eaeaea;
 
-  &:focus {
-    background-color: transparent;
-    outline: none;
+  &::placeholder {
+    color: #eaeaea;
   }
+`;
+
+export const Icon = styled(AiOutlineSearch)`
+  position: absolute;
+  top: 15px;
+  left: 5px;
 `;

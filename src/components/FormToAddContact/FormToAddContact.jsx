@@ -1,13 +1,6 @@
 import { useState } from "react";
 import { nanoid } from "nanoid";
-import {
-  FormStyled,
-  Input,
-  Label,
-  Button,
-  Title,
-} from "./FormToAddContact.styled";
-import { BsFillTelephonePlusFill } from "react-icons/bs";
+import { FormStyled, Input, Button, Title } from "./FormToAddContact.styled";
 
 // -------REDUX-----------------
 import { useDispatch, useSelector } from "react-redux";
@@ -66,49 +59,41 @@ export function Form() {
 
   return (
     <FormStyled onSubmit={onFormSubmmit}>
-      <Title>
-        Add contact <BsFillTelephonePlusFill />
-      </Title>
-      <Label>
-        Name
-        <Input
-          type="text"
-          name="name"
-          value={name}
-          // pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-          // title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-          required
-          placeholder="enter name"
-          onChange={onHandlerChange}
-        />
-      </Label>
-      <Label>
-        Email
-        <Input
-          type="email"
-          name="email"
-          value={email}
-          // pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-          // title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-          required
-          placeholder="enter email"
-          onChange={onHandlerChange}
-        />
-      </Label>
-      <Label>
-        Number
-        <Input
-          type="tel"
-          name="phone"
-          value={phone}
-          // pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-          // title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-          required
-          placeholder="enter number"
-          onChange={onHandlerChange}
-        />
-      </Label>
-      <Button>Add contact</Button>
+      <Title>Add contact</Title>
+
+      <Input
+        type="text"
+        name="name"
+        value={name}
+        // pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+        // title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+        required
+        placeholder="enter name"
+        onChange={onHandlerChange}
+      />
+
+      <Input
+        type="email"
+        name="email"
+        value={email}
+        // pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+        // title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+        required
+        placeholder="enter email"
+        onChange={onHandlerChange}
+      />
+
+      <Input
+        type="tel"
+        name="phone"
+        value={phone}
+        // pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+        // title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+        required
+        placeholder="enter number"
+        onChange={onHandlerChange}
+      />
+      <Button>Add</Button>
     </FormStyled>
   );
 }

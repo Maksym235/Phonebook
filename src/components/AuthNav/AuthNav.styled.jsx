@@ -5,23 +5,25 @@ export const Conteiner = styled.nav`
   display: flex;
   gap: 15px;
   margin-left: auto;
-  margin-right: 80px;
 `;
 
 export const LogIn = styled(NavLink)`
-  display: flex;
-  flex-direction: row;
+  text-decoration: none;
+  z-index: 1000;
+  display: inline-flex;
+  height: 49px;
+  padding: 5px 59px;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
-  padding: 13px 59px;
+  border: none;
   gap: 10px;
-  background: #1b1b1b;
+  flex-shrink: 0;
   border-radius: 50px;
-  font-weight: 600;
   font-size: 17px;
-  line-height: 26px;
-  color: #ffffff;
-
-  border: 1px solid tomato;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  background-color: #000;
+  color: #fff;
 `;

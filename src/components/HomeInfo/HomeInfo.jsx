@@ -1,6 +1,8 @@
 import { Conteiner, Title, Description, Slogan, Btn } from "./HomeInfo.styled";
-
+import { useAuth } from "../hooks/useAuth";
 export function HomeInfo() {
+  const { user } = useAuth();
+  console.log(user);
   return (
     <Conteiner>
       <Title>All your contacts in one place</Title>
@@ -14,7 +16,11 @@ export function HomeInfo() {
         save their contacts&apos; information, such as names, phone numbers,
         email addresses, and social media profiles, in a centralized location.
       </Description>
-      <Btn to="/register">Get started</Btn>
+      {user ? (
+        <Btn to="/contacts">Get started</Btn>
+      ) : (
+        <Btn to="/register">Get started</Btn>
+      )}
     </Conteiner>
   );
 }

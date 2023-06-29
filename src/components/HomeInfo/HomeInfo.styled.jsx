@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
 
 export const Conteiner = styled.div`
-  margin-left: 80px;
   width: 620px;
   display: flex;
   flex-direction: column;

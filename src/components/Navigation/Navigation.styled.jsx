@@ -2,9 +2,13 @@ import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
 export const Conteiner = styled.div`
   display: flex;
-  gap: 60px;
-  margin-left: 100px;
-  padding: 28px 0px;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  gap: 20px;
+  // gap: 60px;
+  // margin-left: 100px;
+  // padding: 28px 0px;
 `;
 export const Link = styled(NavLink)`
   text-decoration: none;

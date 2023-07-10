@@ -1,14 +1,23 @@
 import { AuthNav } from "../AuthNav/AuthNav";
 import { Navigation } from "../Navigation/Navigation";
 import { UserMenu } from "../UserMenu/UserMenu";
-import { Header } from "./AppBar.styled";
+import { Header, ModalBtn } from "./AppBar.styled";
 import logo from "../../assets/logo.svg";
 import logoMobile from "../../assets/logoMobile.png";
+import { useMatchMedia } from "../hooks/useMatchMedia";
+import { useState } from "react";
+import { BurgerMenu } from "../BurgerMenu/BurgerMenu";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { FaUserCircle } from "react-icons/fa";
 //--------------REDUX-------------
 import { useAuth } from "../hooks/useAuth";
 import { NavLink, useLocation } from "react-router-dom";
-import { useMatchMedia } from "../hooks/useMatchMedia";
 export function AppBar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const togleOpen = () => {
+    setIsOpen((state) => !state);
+  };
   const { isMobile } = useMatchMedia();
   const { pathname } = useLocation();
   const { isLoggedIn } = useAuth();
@@ -25,13 +34,20 @@ export function AppBar() {
   }
   if (isMobile) {
     return (
-      <Header isMobile>
-        <button>Bu</button>
-        <NavLink to="/">
-          <img src={logoMobile} alt="logo" />
-        </NavLink>
-        <button>user</button>
-      </Header>
+      <>
+        <Header isMobile>
+          <ModalBtn onClick={togleOpen}>
+            <GiHamburgerMenu color="#bcbff2" size={35} />
+          </ModalBtn>
+          <NavLink to="/">
+            <img src={logoMobile} alt="logo" />
+          </NavLink>
+          <ModalBtn>
+            <FaUserCircle color="#bcbff2" size={35} />
+          </ModalBtn>
+        </Header>
+        {isOpen && <BurgerMenu isOpen={isOpen} togleOpen={togleOpen} />}
+      </>
     );
   }
   return (

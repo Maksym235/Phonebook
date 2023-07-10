@@ -6,9 +6,13 @@ export const Conteiner = styled.div`
   margin-top: 40px;
   margin-bottom: 20px;
   gap: 20px;
-  // gap: 60px;
-  // margin-left: 100px;
-  // padding: 28px 0px;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    margin: 0;
+    gap: 60px;
+    margin-left: 100px;
+    padding: 28px 0px;
+  }
 `;
 export const Link = styled(NavLink)`
   text-decoration: none;

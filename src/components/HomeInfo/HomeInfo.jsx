@@ -1,6 +1,9 @@
 import { Conteiner, Title, Description, Slogan, Btn } from "./HomeInfo.styled";
 import { useAuth } from "../hooks/useAuth";
+import { AiOutlineArrowRight } from "react-icons/ai";
+import { useMatchMedia } from "../hooks/useMatchMedia";
 export function HomeInfo() {
+  const { isMobile } = useMatchMedia();
   const { user } = useAuth();
   console.log(user);
   return (
@@ -17,9 +20,13 @@ export function HomeInfo() {
         email addresses, and social media profiles, in a centralized location.
       </Description>
       {user ? (
-        <Btn to="/contacts">Get started</Btn>
+        <Btn to="/contacts">
+          Get started {isMobile && <AiOutlineArrowRight size={24} />}
+        </Btn>
       ) : (
-        <Btn to="/register">Get started</Btn>
+        <Btn to="/register">
+          Get started{isMobile && <AiOutlineArrowRight size={24} />}
+        </Btn>
       )}
     </Conteiner>
   );

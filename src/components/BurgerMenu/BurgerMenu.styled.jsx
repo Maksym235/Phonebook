@@ -1,19 +1,42 @@
-import styled from "@emotion/styled";
+import styled, { keyframes } from "styled-components";
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  transform: translateY(-100%);
+  
+  }
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+`;
 
+// const fadeOut = keyframes`
+//   from {
+//     opacity: 1;
+//   transform: translateY(0);
+
+//   }
+//   to {
+//      opacity: 0;
+//   transform: translateY(-100%);
+//   }
+// `;
 export const Conteiner = styled.div`
   z-index: 1000;
   position: absolute;
-  top: -94px;
-  left: -20px;
+  top: 0px;
+  left: 0px;
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   background-color: #1b1b1b;
-  background-image: url("./assets/bgLines3x.png");
+  background-image: url("./src/assets/bgLines3x.png");
   background-size: cover;
+  animation: ${fadeIn} 0.5s ease-in-out;
 `;
 
 export const WrapperContent = styled.div`
-  padding: 20px;
+  padding: 10px 20px;
 `;
 
 export const Wrap = styled.div`

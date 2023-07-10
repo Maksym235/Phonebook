@@ -2,12 +2,21 @@ import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
 
 export const Conteiner = styled.div`
+  margin-top: 370px;
+  margin-bottom: 20px;
   width: 620px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
   gap: 20px;
+  @media (min-width: 768px) {
+    margin: 0;
+    width: 400px;
+  }
+  @media (min-width: 1280px) {
+    margin: 0;
+  }
 `;
 
 export const Title = styled.p`
@@ -42,6 +51,14 @@ export const Description = styled.p`
 `;
 
 export const Btn = styled(NavLink)`
+  @media (max-width: 767px) {
+    position: absolute;
+    top: 275px;
+    right: 0px;
+    z-index: 999;
+    border: 2px solid #1b1b1b;
+    gap: 10px;
+  }
   display: flex;
   align-items: center;
   justify-content: center;

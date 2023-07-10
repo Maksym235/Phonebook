@@ -4,8 +4,12 @@ export const FormStyled = styled.form`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 430px;
-  margin-bottom: 50px;
+  width: 280px;
+  align-items: center;
+  @media (min-width: 768px) {
+    width: 430px;
+    margin-bottom: 50px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -30,7 +34,7 @@ export const Label = styled.label`
 
 export const Input = styled.input`
   display: flex;
-  width: 400px;
+  width: 280px;
   padding: 17px 0px 17px 30px;
   align-items: center;
   gap: 10px;
@@ -47,16 +51,20 @@ export const Input = styled.input`
   &::placeholder {
     color: #eaeaea;
   }
+  @media (min-width: 768px) {
+    width: 400px;
+  }
 `;
 
 export const Button = styled.button`
   display: flex;
-  width: 430px;
+  width: 310px;
   height: 49px;
   padding: 13px 59px;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  border: none;
   border-radius: 50px;
   background-color: #bcbff2;
   font-size: 17px;
@@ -70,5 +78,8 @@ export const Button = styled.button`
 
   &:hover {
     background-color: #bfa8ee;
+  }
+  @media (min-width: 768px) {
+    width: 430px;
   }
 `;

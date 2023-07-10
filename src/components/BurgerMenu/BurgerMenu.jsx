@@ -6,6 +6,7 @@ import {
   LogOut,
   WrapperContent,
 } from "./BurgerMenu.styled";
+import PropTypes from "prop-types";
 import { AiOutlineClose } from "react-icons/ai";
 import logoMobile from "../../assets/logoMobile.png";
 import { useDispatch } from "react-redux";
@@ -27,11 +28,15 @@ export const BurgerMenu = ({ togleOpen }) => {
         <Wrap>
           <img src={logoMobile} alt="logo" />
         </Wrap>
-        <Navigation />
+        <Navigation togleOpen={togleOpen} />
         <LogOut type="button" onClick={handleLogOut}>
           Log out
         </LogOut>
       </WrapperContent>
     </Conteiner>
   );
+};
+
+BurgerMenu.PropTypes = {
+  togleOpen: PropTypes.any,
 };

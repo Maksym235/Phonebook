@@ -1,9 +1,16 @@
-import { Conteiner, Link } from './Navigation.styled';
-export function Navigation() {
+import { Conteiner, Link } from "./Navigation.styled";
+export function Navigation({ togleOpen }) {
+  const handleClick = () => {
+    togleOpen();
+  };
   return (
     <Conteiner>
-      <Link to="/">Home</Link>
-      <Link to="/contacts">Contacts</Link>
+      <Link onClick={handleClick} to="/">
+        Home
+      </Link>
+      <Link onClick={handleClick} to="/contacts">
+        Contacts
+      </Link>
     </Conteiner>
   );
 }

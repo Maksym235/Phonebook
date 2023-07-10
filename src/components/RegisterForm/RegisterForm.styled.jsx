@@ -5,7 +5,7 @@ export const Form = styled.form`
   padding: 143px 0px;
   margin: 0px auto;
   display: flex;
-  width: 430px;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,7 @@ export const Input = styled.input`
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 400px;
+  width: 280px;
   padding: 17px 0px 17px 30px;
   gap: 10px;
   background: #adafdd;
@@ -39,6 +39,10 @@ export const Input = styled.input`
     line-height: 26px;
     color: #eaeaea;
   }
+
+  @media (min-width: 768px) {
+    width: 430px;
+  }
 `;
 
 export const Btn = styled.button`
@@ -48,7 +52,7 @@ export const Btn = styled.button`
   align-items: center;
   padding: 13px 59px;
   gap: 10px;
-  width: 430px;
+  width: 310px;
   height: 49px;
   background: #1b1b1b;
   border-radius: 50px;
@@ -56,6 +60,10 @@ export const Btn = styled.button`
   font-size: 17px;
   line-height: 26px;
   color: #ffffff;
+
+  @media (min-width: 768px) {
+    width: 430px;
+  }
 `;
 
 export const HaveAcc = styled.p`

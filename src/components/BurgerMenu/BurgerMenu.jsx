@@ -8,7 +8,7 @@ import {
 } from "./BurgerMenu.styled";
 import PropTypes from "prop-types";
 import { AiOutlineClose } from "react-icons/ai";
-import logoMobile from "../../assets/logoMobile.png";
+import logo from "../../../public/assets/logo.svg";
 import { useDispatch } from "react-redux";
 import { logOut } from "../../redux/Auth/authOperations";
 export const BurgerMenu = ({ togleOpen }) => {
@@ -26,7 +26,7 @@ export const BurgerMenu = ({ togleOpen }) => {
           <AiOutlineClose color="#bcbff2" size={35} />
         </CloseBtn>
         <Wrap>
-          <img src={logoMobile} alt="logo" />
+          <img src={logo} alt="logo" />
         </Wrap>
         <Navigation togleOpen={togleOpen} />
         <LogOut type="button" onClick={handleLogOut}>

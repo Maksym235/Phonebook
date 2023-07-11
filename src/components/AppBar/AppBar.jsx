@@ -2,8 +2,7 @@ import { AuthNav } from "../AuthNav/AuthNav";
 import { Navigation } from "../Navigation/Navigation";
 import { UserMenu } from "../UserMenu/UserMenu";
 import { Header, ModalBtn } from "./AppBar.styled";
-import logo from "../../assets/logo.svg";
-import logoMobile from "../../assets/logoMobile.png";
+import logo from "../../../public/assets/logo.svg";
 import { useMatchMedia } from "../hooks/useMatchMedia";
 import { useState } from "react";
 import { BurgerMenu } from "../BurgerMenu/BurgerMenu";
@@ -40,7 +39,7 @@ export function AppBar() {
             <GiHamburgerMenu color="#bcbff2" size={35} />
           </ModalBtn>
           <NavLink to="/">
-            <img src={logoMobile} alt="logo" />
+            <img src={logo} alt="logo" />
           </NavLink>
           <ModalBtn>
             <FaUserCircle color="#bcbff2" size={35} />

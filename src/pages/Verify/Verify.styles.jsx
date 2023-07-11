@@ -12,7 +12,7 @@ export const Conteiner = styled.div`
   margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url("/src/assets/FormBg.jpg");
+  background-image: url("/public/assets/FormBg.jpg");
   background-size: cover;
   border-radius: 50px;
   width: 800px;
@@ -27,4 +27,3 @@ export const Text = styled.p`
   padding: 0px 20px;
   font-size: 24px;
 `;
-

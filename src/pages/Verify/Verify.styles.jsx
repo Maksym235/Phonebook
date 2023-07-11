@@ -12,7 +12,7 @@ export const Conteiner = styled.div`
   margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url("/public/assets/FormBg.jpg");
+  background-image: url("/public/FormBg.jpg");
   background-size: cover;
   border-radius: 50px;
   width: 300px;

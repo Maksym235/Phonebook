@@ -4,7 +4,7 @@ export const Conteiner = styled.div`
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-image: url("/public/assets/FormBg.jpg");
+  background-image: url("/public/FormBg.jpg");
   background-size: cover;
   border-radius: 50px;
   @media (min-width: 768px) {

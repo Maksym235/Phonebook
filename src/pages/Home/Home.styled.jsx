@@ -36,7 +36,7 @@ export const ImgBg = styled.div`
     height: 929px;
     border-radius: 50px 0px 0px 50px;
     background-color: #bcbff2;
-    background-image: url("./public/assets/mainIimg.png");
+    background-image: url("./public/mainIimg.png");
     background-size: 674px 661px;
     background-repeat: no-repeat;
     background-position: center center;

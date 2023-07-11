@@ -2,7 +2,7 @@ import { AuthNav } from "../AuthNav/AuthNav";
 import { Navigation } from "../Navigation/Navigation";
 import { UserMenu } from "../UserMenu/UserMenu";
 import { Header, ModalBtn } from "./AppBar.styled";
-import logo from "../../../public/assets/logo.svg";
+import logo from "../../../public/logo.svg";
 import { useMatchMedia } from "../hooks/useMatchMedia";
 import { useState } from "react";
 import { BurgerMenu } from "../BurgerMenu/BurgerMenu";

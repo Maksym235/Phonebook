@@ -8,7 +8,7 @@ import {
 } from "./BurgerMenu.styled";
 import PropTypes from "prop-types";
 import { AiOutlineClose } from "react-icons/ai";
-import logo from "../../../public/assets/logo.svg";
+import logo from "../../../public/logo.svg";
 import { useDispatch } from "react-redux";
 import { logOut } from "../../redux/Auth/authOperations";
 export const BurgerMenu = ({ togleOpen }) => {

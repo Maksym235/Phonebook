@@ -15,11 +15,22 @@ export const Conteiner = styled.div`
   background-image: url("/public/assets/FormBg.jpg");
   background-size: cover;
   border-radius: 50px;
-  width: 800px;
+  width: 300px;
+  @media (min-width: 768px) {
+    width: 600px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 800px;
+  }
 `;
 
 export const Title = styled.h2`
   color: #1b1b1b;
+`;
+
+export const Link = styled.a`
+  dispay: flex;
 `;
 
 export const Text = styled.p`

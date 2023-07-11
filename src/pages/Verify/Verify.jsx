@@ -1,4 +1,4 @@
-import { Conteiner, Text, Title, EmailIncon } from "./Verify.styles";
+import { Conteiner, Text, Title, EmailIncon, Link } from "./Verify.styles";
 
 export default function Verify() {
   return (
@@ -10,7 +10,7 @@ export default function Verify() {
         your account. The link in the email will expire in 24 hours.
       </Text>
       <Text>
-        <a href="">Click here</a> if you have not received the letter.
+        <Link href="">Click here</Link> if you have not received the letter.
       </Text>
     </Conteiner>
   );

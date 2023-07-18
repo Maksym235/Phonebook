@@ -1,4 +1,4 @@
-import{n as i,N as s,u as r,a as p,j as e,A as o}from"./index-49f4a552.js";const d=i.div`
+import{n as i,N as s,u as r,a as p,j as e,A as n}from"./index-16279125.js";const d=i.div`
   width: 100%;
   height: 100%;
   position: relative;
@@ -14,7 +14,7 @@ import{n as i,N as s,u as r,a as p,j as e,A as o}from"./index-49f4a552.js";const
   border-radius: 20px 0 0 20px;
   position: absolute;
   background-color: #bcbff2;
-  background-image: url("mainMobile.png");
+  background-image: url("assets/mainMobile.png");
   background-size: 289px 198px;
   background-repeat: no-repeat;
   background-position: right 40%;
@@ -32,7 +32,7 @@ import{n as i,N as s,u as r,a as p,j as e,A as o}from"./index-49f4a552.js";const
     height: 929px;
     border-radius: 50px 0px 0px 50px;
     background-color: #bcbff2;
-    background-image: url("mainIimg.png");
+    background-image: url("assets/mainIimg.png");
     background-size: 674px 661px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -78,7 +78,7 @@ import{n as i,N as s,u as r,a as p,j as e,A as o}from"./index-49f4a552.js";const
   display: flex;
   align-items: flex-end;
   color: #a6a6a6;
-`,a=i(s)`
+`,o=i(s)`
   @media (max-width: 767px) {
     position: absolute;
     top: 275px;
@@ -102,4 +102,4 @@ import{n as i,N as s,u as r,a as p,j as e,A as o}from"./index-49f4a552.js";const
   font-size: 17px;
   line-height: 26px;
   color: #000000;
-`;function f(){const{isMobile:t}=r(),{user:n}=p();return console.log(n),e.jsxs(c,{children:[e.jsx(l,{children:"All your contacts in one place"}),e.jsx(g,{children:"Call U - Keep all your contacts in a safe place and easily share them with your friends"}),e.jsx(h,{children:"A contact storage tool is a digital application designed to help users store, manage, and organize their contacts. With this tool, users can save their contacts' information, such as names, phone numbers, email addresses, and social media profiles, in a centralized location."}),n?e.jsxs(a,{to:"/contacts",children:["Get started ",t&&e.jsx(o,{size:24})]}):e.jsxs(a,{to:"/register",children:["Get started",t&&e.jsx(o,{size:24})]})]})}function u(){return e.jsxs(d,{children:[e.jsx(f,{}),e.jsx(x,{})]})}export{u as default};
+`;function f(){const{isMobile:t}=r(),{user:a}=p();return e.jsxs(c,{children:[e.jsx(l,{children:"All your contacts in one place"}),e.jsx(g,{children:"Call U - Keep all your contacts in a safe place and easily share them with your friends"}),e.jsx(h,{children:"A contact storage tool is a digital application designed to help users store, manage, and organize their contacts. With this tool, users can save their contacts' information, such as names, phone numbers, email addresses, and social media profiles, in a centralized location."}),a?e.jsxs(o,{to:"/contacts",children:["Get started ",t&&e.jsx(n,{size:24})]}):e.jsxs(o,{to:"/register",children:["Get started",t&&e.jsx(n,{size:24})]})]})}function u(){return e.jsxs(d,{children:[e.jsx(f,{}),e.jsx(x,{})]})}export{u as default};

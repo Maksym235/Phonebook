@@ -1,4 +1,4 @@
-import{n,N as d,b as x,j as e,s as c}from"./index-49f4a552.js";const g=n.form`
+import{n as t,N as d,b as l,j as e,l as x}from"./index-16279125.js";const c=t.form`
   padding: 143px 0px;
   margin: 0px auto;
   display: flex;
@@ -7,7 +7,11 @@ import{n,N as d,b as x,j as e,s as c}from"./index-49f4a552.js";const g=n.form`
   justify-content: center;
   align-items: center;
   gap: 20px;
-`,m=n.h1`
+
+  @media (min-width: 768px) {
+    width: 430px;
+  }
+`,g=t.h1`
   margin: 0;
   margin-bottom: 30px;
   font-weight: 600;
@@ -15,7 +19,7 @@ import{n,N as d,b as x,j as e,s as c}from"./index-49f4a552.js";const g=n.form`
   line-height: 43px;
   letter-spacing: 0.01em;
   color: #1b1b1b;
-`,i=n.input`
+`,o=t.input`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -34,9 +38,9 @@ import{n,N as d,b as x,j as e,s as c}from"./index-49f4a552.js";const g=n.form`
   }
 
   @media (min-width: 768px) {
-    width: 430px;
+    width: 400px;
   }
-`,h=n.button`
+`,m=t.button`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -55,13 +59,13 @@ import{n,N as d,b as x,j as e,s as c}from"./index-49f4a552.js";const g=n.form`
   @media (min-width: 768px) {
     width: 430px;
   }
-`,u=n.p`
+`,h=t.p`
   font-weight: 400;
   font-size: 17px;
   line-height: 26px;
   color: #1b1b1b;
   margin: 0;
-`,f=n(d)`
+`,u=t(d)`
   margin: 0;
   font-weight: 600;
   text-decoration: none;
@@ -70,15 +74,16 @@ import{n,N as d,b as x,j as e,s as c}from"./index-49f4a552.js";const g=n.form`
   display: flex;
   align-items: flex-end;
   color: #000000;
-`;function b(){const a=x(),r=o=>{o.preventDefault();const t=o.currentTarget,s=t.elements.name.value,p=t.elements.email.value,l=t.elements.password.value;a(c({name:s,email:p,password:l})),t.reset()};return e.jsxs(g,{onSubmit:r,children:[e.jsx(m,{children:"Sign Up"}),e.jsx(i,{label:"login",type:"text",name:"name",placeholder:"enter your login"}),e.jsx(i,{label:"email",type:"email",name:"email",placeholder:"enter your email"}),e.jsx(i,{label:"password",type:"password",name:"password",placeholder:"enter your password"}),e.jsx(h,{type:"submit",children:"Sign Up"}),e.jsx(u,{children:"Already have an account?"}),e.jsx(f,{to:"/login",children:"Log in"})]})}const w=n.div`
+`;function f(){const a=l(),r=n=>{n.preventDefault();const i=n.currentTarget,s=i.elements.email.value,p=i.elements.password.value;a(x({email:s,password:p})),i.reset()};return e.jsxs(c,{onSubmit:r,children:[e.jsx(g,{children:"Log in"}),e.jsx(o,{label:"email",type:"email",name:"email",placeholder:"enter your email"}),e.jsx(o,{label:"password",type:"password",name:"password",placeholder:"enter your password"}),e.jsx(m,{type:"submit",children:"Log In"}),e.jsx(h,{children:"Don’t have an account?"}),e.jsx(u,{to:"/register",children:"Register"})]})}const w=t.div`
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-image: url("FormBg.jpg");
+  background-image: url("assets/FormBg.jpg");
   background-size: cover;
   border-radius: 50px;
-
   @media (min-width: 768px) {
     width: 768px;
+    margin-left: auto;
+    margin-right: auto;
   }
-`;function y(){return e.jsx(w,{children:e.jsx(b,{})})}export{y as default};
+`;function j(){return e.jsx(w,{children:e.jsx(f,{})})}export{j as default};

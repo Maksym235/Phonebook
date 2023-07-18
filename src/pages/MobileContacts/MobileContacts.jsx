@@ -4,7 +4,6 @@ import { useDispatch } from "react-redux";
 import { fetchContacts } from "../../redux/Contacts/operations";
 import { Outlet } from "react-router-dom";
 import { Conteiner, NavBar, Link } from "./MobileContacts.styled";
-// import { Form } from "../../components/FormToAddContact/FormToAddContact";
 const MobileContacts = () => {
   const dispatch = useDispatch();
   useEffect(() => {

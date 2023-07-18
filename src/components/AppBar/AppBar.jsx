@@ -20,8 +20,6 @@ export function AppBar() {
   const { isMobile } = useMatchMedia();
   const { pathname } = useLocation();
   const { isLoggedIn } = useAuth();
-  console.log(pathname);
-  console.log(isLoggedIn);
   if (pathname === "/verify") {
     return (
       <Header style={{ marginTop: "20px" }}>

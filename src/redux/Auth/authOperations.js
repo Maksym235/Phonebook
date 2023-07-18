@@ -1,7 +1,6 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-// axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
 axios.defaults.baseURL = "https://callu-api.onrender.com/";
 
 const setAuthHeader = (token) => {
@@ -28,7 +27,6 @@ export const logIn = createAsyncThunk(
   "auth/logIn",
   async (userData, thunkAPI) => {
     try {
-      // console.log(userData);
       const resp = await axios.post("auth/login", userData);
       setAuthHeader(resp.data.token);
 

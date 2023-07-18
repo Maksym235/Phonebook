@@ -65,8 +65,6 @@ export function Form() {
         type="text"
         name="name"
         value={name}
-        // pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-        // title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
         required
         placeholder="enter name"
         onChange={onHandlerChange}
@@ -76,8 +74,6 @@ export function Form() {
         type="email"
         name="email"
         value={email}
-        // pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-        // title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
         required
         placeholder="enter email"
         onChange={onHandlerChange}
@@ -87,8 +83,6 @@ export function Form() {
         type="tel"
         name="phone"
         value={phone}
-        // pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-        // title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
         required
         placeholder="enter number"
         onChange={onHandlerChange}

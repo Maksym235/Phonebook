@@ -11,17 +11,6 @@ const fadeIn = keyframes`
   }
 `;
 
-// const fadeOut = keyframes`
-//   from {
-//     opacity: 1;
-//   transform: translateY(0);
-
-//   }
-//   to {
-//      opacity: 0;
-//   transform: translateY(-100%);
-//   }
-// `;
 export const Conteiner = styled.div`
   z-index: 1000;
   position: absolute;
@@ -30,7 +19,7 @@ export const Conteiner = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: #1b1b1b;
-  background-image: url("bgLines3x.png");
+  background-image: url("assets/bgLines3x.png");
   background-size: cover;
   animation: ${fadeIn} 0.5s ease-in-out;
 `;

@@ -5,7 +5,6 @@ import { useMatchMedia } from "../hooks/useMatchMedia";
 export function HomeInfo() {
   const { isMobile } = useMatchMedia();
   const { user } = useAuth();
-  console.log(user);
   return (
     <Conteiner>
       <Title>All your contacts in one place</Title>

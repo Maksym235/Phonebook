@@ -7,9 +7,6 @@ import { useDispatch } from "react-redux";
 import { refreshUser } from "../../redux/Auth/authOperations";
 import { useAuth } from "../../components/hooks/useAuth";
 
-// import { fetchContacts } from 'redux/Contacts/operations';
-// import { selectIsLoading, selectError } from 'redux/Contacts/selectors';
-
 //--------------COMPONENTS---------
 import { Layout } from "../Layout/Layout";
 import { Form } from "../FormToAddContact/FormToAddContact";
@@ -35,9 +32,6 @@ export default function App() {
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
-  // const isLoading = useSelector(selectIsLoading);
-  // const isError = useSelector(selectError);
-
   return isRefresh ? (
     <h5>Refreshing user, please wait...</h5>
   ) : (

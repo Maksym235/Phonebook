@@ -1,4 +1,4 @@
-import{n as i,N as s,u as r,a as p,j as e,A as o}from"./index-3288e12c.js";const d=i.div`
+import{n as i,N as s,u as r,a as p,j as e,A as o}from"./index-49f4a552.js";const d=i.div`
   width: 100%;
   height: 100%;
   position: relative;
@@ -14,7 +14,7 @@ import{n as i,N as s,u as r,a as p,j as e,A as o}from"./index-3288e12c.js";const
   border-radius: 20px 0 0 20px;
   position: absolute;
   background-color: #bcbff2;
-  background-image: url("assets/mainMobile.png");
+  background-image: url("mainMobile.png");
   background-size: 289px 198px;
   background-repeat: no-repeat;
   background-position: right 40%;
@@ -32,7 +32,7 @@ import{n as i,N as s,u as r,a as p,j as e,A as o}from"./index-3288e12c.js";const
     height: 929px;
     border-radius: 50px 0px 0px 50px;
     background-color: #bcbff2;
-    background-image: url("assets/mainIimg.png");
+    background-image: url("mainIimg.png");
     background-size: 674px 661px;
     background-repeat: no-repeat;
     background-position: center center;

@@ -30,7 +30,7 @@ export const Conteiner = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: #1b1b1b;
-  background-image: url("./src/assets/bgLines3x.png");
+  background-image: url("bgLines3x.png");
   background-size: cover;
   animation: ${fadeIn} 0.5s ease-in-out;
 `;

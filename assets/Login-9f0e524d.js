@@ -1,4 +1,4 @@
-import{n as t,N as d,b as l,j as e,l as x}from"./index-7de1542a.js";const c=t.form`
+import{n as t,N as d,b as l,j as e,l as x}from"./index-9ce949e4.js";const c=t.form`
   padding: 143px 0px;
   margin: 0px auto;
   display: flex;
@@ -74,11 +74,11 @@ import{n as t,N as d,b as l,j as e,l as x}from"./index-7de1542a.js";const c=t.fo
   display: flex;
   align-items: flex-end;
   color: #000000;
-`;function f(){const r=l(),a=n=>{n.preventDefault();const i=n.currentTarget,s=i.elements.email.value,p=i.elements.password.value;r(x({email:s,password:p})),i.reset()};return e.jsxs(c,{onSubmit:a,children:[e.jsx(g,{children:"Log in"}),e.jsx(o,{label:"email",type:"email",name:"email",placeholder:"enter your email"}),e.jsx(o,{label:"password",type:"password",name:"password",placeholder:"enter your password"}),e.jsx(m,{type:"submit",children:"Log In"}),e.jsx(h,{children:"Don’t have an account?"}),e.jsx(u,{to:"/register",children:"Register"})]})}const b=t.div`
+`;function f(){const a=l(),r=n=>{n.preventDefault();const i=n.currentTarget,s=i.elements.email.value,p=i.elements.password.value;a(x({email:s,password:p})),i.reset()};return e.jsxs(c,{onSubmit:r,children:[e.jsx(g,{children:"Log in"}),e.jsx(o,{label:"email",type:"email",name:"email",placeholder:"enter your email"}),e.jsx(o,{label:"password",type:"password",name:"password",placeholder:"enter your password"}),e.jsx(m,{type:"submit",children:"Log In"}),e.jsx(h,{children:"Don’t have an account?"}),e.jsx(u,{to:"/register",children:"Register"})]})}const w=t.div`
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-image: url("/public/FormBg.jpg");
+  background-image: url("assets/FormBg.jpg");
   background-size: cover;
   border-radius: 50px;
   @media (min-width: 768px) {
@@ -86,4 +86,4 @@ import{n as t,N as d,b as l,j as e,l as x}from"./index-7de1542a.js";const c=t.fo
     margin-left: auto;
     margin-right: auto;
   }
-`;function j(){return e.jsx(b,{children:e.jsx(f,{})})}export{j as default};
+`;function j(){return e.jsx(w,{children:e.jsx(f,{})})}export{j as default};
